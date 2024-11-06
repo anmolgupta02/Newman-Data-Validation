@@ -15,7 +15,7 @@ const paths = {
     PISAMComplianceApproval : "data.properties.PISAMComplianceApproval.value",
     PISEYComplianceApproval: "data.properties.PISEYComplianceApproval.value",
     clientType:"data.properties.clientType.value",
-    roleType:"data.properties.clientType.value",
+    roleType:"data.properties.roleType.value",
     primaryBusinessUnit:"data.properties.primaryBusinessUnit.value",
     sanctions:"data.properties.sanctions.value",
     creditControlReminderEmail:"data.properties.creditControlReminderEmail.value",
