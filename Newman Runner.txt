@@ -1,0 +1,1 @@
+newman run "path to collected exported file" --environment "path to exported env file" --env-var client_id=vistra-sdlc-dev --env-var client_secret="if specifically want to define any element"  --iteration-data "path to input file" --reporters htmlextra
