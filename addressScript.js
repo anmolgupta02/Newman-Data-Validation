@@ -4,12 +4,12 @@
 
   // Read expected values from the CSV file for validation
   //const expectedData = {
-    expected_address_type: pm.iterationData.get('address_type'),
-    expected_address_line1: pm.iterationData.get('address_line1'),
-    expected_address_country: pm.iterationData.get('address_country'),
-    expected_address_city: pm.iterationData.get('address_city'),
-    expected_address_zipCodePostCode: pm.iterationData.get('address_zipCodePostCode')
-};
+//     expected_address_type: pm.iterationData.get('address_type'),
+//     expected_address_line1: pm.iterationData.get('address_line1'),
+//     expected_address_country: pm.iterationData.get('address_country'),
+//     expected_address_city: pm.iterationData.get('address_city'),
+//     expected_address_zipCodePostCode: pm.iterationData.get('address_zipCodePostCode')
+// };
 
 // Loop through each address and validate
 Object.keys(addresses).forEach(addressKey => {

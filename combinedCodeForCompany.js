@@ -90,7 +90,12 @@ Object.keys(paths).forEach(fields=>{
 
             try{
 
-                let actualValue = getNestedValue(pm.response.json(), responsePath)
+                let actualValue = getNestedValue(pm.response.json(), responsePath);
+
+                if (typeof expectedValue === 'string' && typeof actualValue === 'string') {
+                    expectedValue = expectedValue.trim();
+                    actualValue = actualValue.trim();
+                }
                 
                 if (!isNaN(expectedValue) && !isNaN(actualValue)) {
                     actualValue = Number(actualValue);
@@ -101,7 +106,7 @@ Object.keys(paths).forEach(fields=>{
 
 
             }catch(error){
-                if(error=='AssertionError'){
+                if(error==='AssertionError'){
                     throw new Error(`The Value Does Not match for ${fields}: ${error.message}`);
                 }
                 throw new Error(`The Object ${fields} is not present in response: ${error.message}`);
