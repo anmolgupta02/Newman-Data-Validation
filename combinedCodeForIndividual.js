@@ -171,6 +171,12 @@ Object.keys(fieldsToValidateWithPaths2).forEach(field => {
                 // Retrieve the value at the custom path using the helper function
                 let actualValue = getNestedValue(pm.response.json(), responsePath);
 
+                if(typeof actualValue === 'string' && typeof expectedValue === 'string'){
+                    expectedValue.trim()
+                    actualValue.trim()
+                }
+
+
                 if (!isNaN(expectedValue) && !isNaN(actualValue)) {
                     actualValue = Number(actualValue);
                 }
