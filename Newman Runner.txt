@@ -1,7 +1,0 @@
-newman run "path to collected exported file" --environment "path to exported env file" --env-var client_id=vistra-sdlc-dev --env-var client_secret="if specifically want to define any element"  --iteration-data "path to input file" --reporters htmlextra
-
-
-
-
-
-newman run "C:\ANMOL\Fenergo Project\Data Migration\Automtion Scripts\Output\Collection\Company\Fenergo Migration - Company Validation.postman_collection.json" --environment "C:\ANMOL\Fenergo Project\Data Migration\Automtion Scripts\Output\Env Files\Fenergo-DEV.postman_environment.json"  --env-var client_id=vistra-sdlc-dev --env-var client_secret=31c690fd-4955-ca52-5311-30a08993bde1 --env-var token= --iteration-data "C:\ANMOL\Fenergo Project\Data Migration\Automtion Scripts\Inputs Files\Phase 2 - 1000 Records\CompanyData_1000Records.csv" --reporters htmlextra
