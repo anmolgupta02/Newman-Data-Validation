@@ -1,15 +1,13 @@
-import { normalize } from 'path';
-import { exec } from "child_process";
-import { error } from 'console';
-import { stdout, stderr } from 'process';
+const { exec } = require('child_process')
+const path = require('path')
 
 
 function genrateCommand(collectionFilePath, envFilePath, envVariables, iterationDataFilePath, reporters){
 
 
-   const normalizedCollectionFilePath = normalize(collectionFilePath);
-   const normalizedEnvFilePath = normalize(envFilePath);    
-   const normalizedIterationDataFilePath = normalize(iterationDataFilePath);
+   const normalizedCollectionFilePath = path.normalize(collectionFilePath);
+   const normalizedEnvFilePath = path.normalize(envFilePath);    
+   const normalizedIterationDataFilePath = path.normalize(iterationDataFilePath);
 
 
     let command = `newman run "${normalizedCollectionFilePath}" --environment "${normalizedEnvFilePath}"` ;
@@ -44,6 +42,23 @@ function executeCommand(generatedCommand){
         console.log(stdout);
         
     })
+
+}
+
+
+function openReport(reportPath){
+
+    const openComand = `start "" "${reportPath}"`;
+
+    exec(openComand, (error)=>{
+        if(error){
+            console.error(`Error Opening Report : ${error}`);
+            
+        } else{
+            console.log("report opened Successfully. ");
+            
+        }
+    })  
 
 }
 
